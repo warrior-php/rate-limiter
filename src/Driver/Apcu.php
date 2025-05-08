@@ -43,9 +43,9 @@ class Apcu implements DriverInterface
      *
      * @param $ttl
      *
-     * @return int
+     * @return float|int
      */
-    protected function getExpireTime($ttl): int
+    protected function getExpireTime($ttl): float|int
     {
         return ceil(time() / $ttl) * $ttl;
     }
